@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-
+ruby "2.3.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# # Use sqlite3 as the database for Active Record
+# gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
@@ -27,6 +27,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "paperclip", "~> 5.0.0.beta1"
 
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -39,6 +44,7 @@ gem "paperclip", "~> 5.0.0.beta1"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
 end
 
 group :development do
