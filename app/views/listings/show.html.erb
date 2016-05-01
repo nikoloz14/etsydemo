@@ -11,7 +11,7 @@
 		<p><%= @listing.user.name %></p>
 		<p><%= @listing.description %></p>
 		<br/>
-		<%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-primary", style:"color:white" %>
+		<%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-primary", style:"color:white", data: {no_turbolink: true }%>
 	</div>
 </div>
 
